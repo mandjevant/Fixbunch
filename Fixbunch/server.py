@@ -4,7 +4,6 @@ import cv2
 import sys
 import time
 import os
-import requests
 import zipfile
 import shutil
 from PIL import Image 
