@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+
+    <!--- basic page needs
+   ================================================== -->
+    <meta charset="utf-8">
+    <title>Fixbunch</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- mobile specific metas
+   ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS
+   ================================================== -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/vendor.css') }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/main.css') }}">
+
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/fonts.css') }}">
+    <!-- script
+   ================================================== -->
+    <link type=text/javascript href="{{ url_for('static', filename='js/modernizr.js') }}">
+    <link type=text/javascript href="{{ url_for('static', filename='js/pace.min.js') }}">
+    <!-- favicons
+    ================================================== -->
+    <link rel="icon" type=image href="{{ url_for('static', filename='images/logo.ico') }}">
+    <link rel="shortcut icon" type=image href="{{ url_for('static', filename='images/logo.ico') }}">
+    <!-- JS
+    ================================================== -->
+    <link type=text/javascript href="{{ url_for('static', filename='js/jquery-2.1.3.min.js') }}">
+    <link type=text/javascript href="{{ url_for('static', filename='js/plugins.js') }}">
+    <link type=text/javascript href="{{ url_for('static', filename='js/main.js') }}">
+
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.css">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.js">
+    </script>
+
+</body>
+</head>
+
+<body id="top">
+    <!-- header 
+   ================================================== -->
+   <header id="header" class="row">   
+   		<div class="header-logo">
+	        <a href="{{ url_for('index') }}">Fixbunch</a>
+	    </div>
+        <div class="header-ligma">
+            <a href="{{ url_for('index') }}">Fixbunch</a>
+        </div>
+	   	<nav id="header-nav-wrap">
+			<ul class="header-main-nav">
+				<li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
+                <li><a class="smoothscroll"  href="#about" title="about">About the tool</a></li>
+                <li><a class="smoothscroll"  href="#working" title="working">How does it work?</a></li>
+				<!-- <li><a class="smoothscroll"  href="#privacy" title="privacy">What about privacy?</a></li> -->
+				<li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
+			</ul>
+            <a href="{{ url_for('sorter') }}" title="sign-up" class="button button-primary cta" aria-hidden="true">Get started!</a>
+		</nav>
+		<a class="header-menu-toggle" href="#"><span>Menu</span></a> 
+   </header> <!-- /header -->
+
+   <!-- home
+   ================================================== -->
+   <section id="home" data-parallax="scroll" data-image-src="/static/images/bg.png" data-natural-width=3000 data-natural-height=2000>
+        <div class="overlay"></div>
+        <div class="home-content">        
+            <div class="row contents">                     
+                <div class="home-content-left">
+                    <h3 data-aos="fade-up">Welcome to Fix<span>bunch</span></h3>
+                    <h1 data-aos="fade-up">
+                        The free image-sorting tool.
+                    </h1>
+                    <div class="buttons" data-aos="fade-up">
+                        <a href="#about" class="smoothscroll button stroke">
+                            <span class="icon-circle-down" aria-hidden="true"></span>
+                            Read how it works
+                        </a>
+                        <a href="{{ url_for('sorter') }}" class="button stroke">
+                            <span class="icon-play" aria-hidden="true"></span>
+                            Get started immediately
+                        </a>
+                    </div>                                         
+                </div>
+                <div class="home-image-right">
+                    <img src="/static/images/boekie.png" 
+                        srcset="/static/images/boekie.png 1x, boekie.png 2x"  
+                        data-aos="fade-up">
+                </div>
+            </div>
+        </div> <!-- end home-content -->
+        <div class="home-scrolldown">
+            <a href="#about" class="scroll-icon smoothscroll">
+                <span>Scroll Down</span>
+                <i class="icon-arrow-right" aria-hidden="true"></i>
+            </a>
+        </div>
+    </section> <!-- end home -->  
+
+    <!-- about
+    ================================================== -->
+    <section id="about">
+        <div class="row about-intro">
+            <div class="col-four">
+                <h1 class="intro-header" data-aos="fade-up">About the tool</h1>
+            </div>
+            <div class="col-eight">
+                <p class="lead" data-aos="fade-up" align="justify">
+                    The Fixbunch algorithm uses custom-made facial recognition software to identify and organize pictures of a person in a database. For example; this tool can be used to find your prom selfies in the endless sea of pictures.
+                </p>
+            </div>                       
+        </div>
+        <script>
+            AOS.init();
+        </script>
+        <div class="row about-features">
+            <div class="features-list block-1-3 block-m-1-2 block-mob-full group">
+                <div class="bgrid feature" data-aos="fade-up">	
+                    <span class="icon"><i class="icon-window"></i></span>            
+                    <div class="service-content" align="justify">	
+                        <h3>Facial detection</h3>
+                        <p>Facial recognition software is a technology capable of identifying a person from a digital image. The software works by comparing selected facial features from given images with faces within a database. The facial recognition software is preprogrammed to detect faces when partially visible, either due to the position or when specified person is wearing facial coverage.
+                        </p>
+                    </div> 	         	 
+                </div> <!-- /bgrid -->
+                <div class="bgrid feature" data-aos="fade-up">	
+                    <span class="icon"><i class="icon-image"></i></span>                          
+                    <div class="service-content" align="justify">	
+                        <h3>High accuracy</h3>  
+                        <p>The program was tested by using the algorithm on 4 well-known databases, and averaging their precision. Total model parameters exceeding 23 million.
+                        After testing the Fixbunch algorithm with predescriped models, the average accuracy and average standard deviation were determined to be 0.89437 ± 0.0152 respectively.
+                        </p>
+                    </div>	                          
+                </div> <!-- /bgrid -->
+                <div class="bgrid feature" data-aos="fade-up">
+                    <span class="icon"><i class="icon-paint-brush"></i></span>  
+                    <div class="service-content" align="justify">
+                        <h3>Easy to use</h3>
+                        <p>Fixbunch values ease-of-use highly. Following the given directions ensure a quick and easy process, it is therefore recommended a user follows these directions in detail. Fixbunch is a system which enables fast implementation and has a gradual learning curve.
+                        </p>                            
+                    </div> 	            	               
+                </div> <!-- /bgrid -->
+                <div class="bgrid feature" data-aos="fade-up">
+                    <span class="icon"><i class="icon-file"></i></span>	  
+                    <div class="service-content" align="justify">
+                        <h3>Clean Code</h3>
+                        <p>Fixbunch thrives on efficiency. Therefore, the code is as clean as it can get, ensuring optimal code behaviour. Additionally, we will not save any of your precious data since your uploaded files are stored locally. Fixbunch is but a means to an end. 
+                        </p>
+                    </div>                
+                </div> <!-- /bgrid -->
+                <div class="bgrid feature" data-aos="fade-up">
+                    <span class="icon"><i class="icon-sliders"></i></span>	
+                    <div class="service-content" align="justify">	
+                        <h3>Easy To Customize</h3>
+                        <p>I guess it is easy to customize, dunno what to put here yet. 
+                        </p>                            
+                    </div>	               
+                </div> <!-- /bgrid -->
+                <div class="bgrid feature" data-aos="fade-up">
+                    <span class="icon"><i class="icon-gift"></i></span>
+                    <div class="service-content" align="justify">
+                        <h3>Free of charge</h3>
+                        <p>Using Fixbunch for personal, professional or commercial use is totally free! However, distributing source code is not allowed. So please do not do it, thanks! :)
+                        </p>     
+                    </div>	               
+                </div> <!-- /bgrid -->
+            </div> <!-- end features-list -->
+        </div> <!-- end about-features -->
+        <div class="row about-how" id="working">         
+            <h1 class="intro-header" data-aos="fade-up">How does it work?</h1>           
+            <div class="about-how-content" data-aos="fade-up">
+                <div class="about-how-steps block-1-2 block-tab-full group">
+                    <div class="bgrid step" data-item="1" align="justify">
+                        <h3>Upload a folder with the pictures</h3>
+                        <p>Simply start by uploading a folder with the pictures database. The uploading of the image database does not hold any constraints.
+                        </p> 
+                    </div>
+                    <div class="bgrid step" data-item="2" align="justify">
+                        <h3>Upload a picture of the person you want to identify</h3>
+                        <p>Upload a picture of the person you want to find in the folder. Make sure the face is clearly visible and face towards the camera. 
+                        </p> 
+                    </div>               
+                    <div class="bgrid step" data-item="3" align="justify">
+                        <h3>Wait</h3>
+                        <p>Have a little patience and wait for the algorithm to finish. The bigger the uploaded dataset, the longer it takes the algorithm to complete.
+                        </p> 
+                    </div>
+                    <div class="bgrid step" data-item="4" align="justify">
+                        <h3>Download the sorted pictures</h3>
+                        <p>The output of the algorithm will be presented in the form of a downloadable folder. Simply download this folder and the desired pictures are on your computer!
+                        </p> 
+                    </div>  
+                </div>           
+           </div> <!-- end about-how-content -->
+        </div> <!-- end about-how -->
+    </section> <!-- end about -->  
+
+        <!-- footer
+    ================================================== -->
+    <footer>
+        <div class="footer-main" id="contact">
+            <div class="row">  
+                <div class="col-three md-1-3 tab-full footer-contact">            
+                    <h4>Contact</h4>
+                    <p>
+                    <a href="mailto:pimtholhuijsen@hotmail.com">pimtholhuijsen@hotmail.com</a><br> 
+                    </p>                    
+                </div> <!-- end footer-contact -->  
+            </div> <!-- /row -->
+        </div> <!-- end footer-main -->
+      <div class="footer-bottom">
+      	<div class="row">
+      		<div class="col-twelve">
+	      		<div class="copyright">
+		         	<span>© Copyright mandjevant 2019.</span> 
+		         	<span>Design by mandjevant</a></span>		     	
+		         </div>
+		         <div id="go-top">
+		            <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up"></i></a>
+		         </div>         
+	      	</div>
+      	</div> <!-- end footer-bottom -->     	
+      </div>
+    </footer>
+    <div id="preloader"> 
+    	<div id="loader"></div>
+    </div>  
+    <!-- Java Script
+    ================================================== -->
+    <link type=text/javascript href="{{ url_for('static', filename='js/jquery-2.1.3.min.js') }}">
+    <link type=text/javascript href="{{ url_for('static', filename='js/plugins.js') }}">
+    <link type=text/javascript href="{{ url_for('static', filename='js/main.js') }}">
+</body>
+</html>
